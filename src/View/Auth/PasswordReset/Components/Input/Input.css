@@ -1,0 +1,68 @@
+.Input-field {
+    margin: 15px 0 10px;
+    position: relative;
+}
+
+.Input-field .Input-field-placeholder {
+    color: #999;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    transition: all 0.25s ease;
+    pointer-events: none;
+}
+
+.Input {
+    border: none;
+    border-bottom: 1px solid grey;
+    cursor: text;
+    height: 20px;
+    width: 260px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    transition: border ease-in 200ms;
+    font-size: 15px;
+}
+
+.Input:active,
+.Input:focus {
+    border-bottom: 1px solid #009fe3;
+    color: #009fe3;
+}
+
+.Input:focus {
+    outline: none;
+}
+
+.Input:disabled {
+    opacity: 20%;
+    background-color: rgba(168, 168, 168, 0.29);
+    border: none;
+    border-bottom: 1px solid;
+}
+
+.Input-invalid {
+    border-color: red;
+    color: red;
+}
+
+.Input-valid {
+    border-color: #32db64;
+    color: #32db64;
+}
+
+.Input:focus ~ .Input-field-placeholder,
+.Input-not-empty ~ .Input-field-placeholder {
+    font-size: 0.75em;
+    color: #009fe3;
+    top: -15px;
+    transition: all 0.125s ease;
+}
+
+.Input-invalid ~ .Input-field-placeholder {
+    color: red;
+}
+
+.Input-valid ~ .Input-field-placeholder {
+    color: #32db64;
+}
