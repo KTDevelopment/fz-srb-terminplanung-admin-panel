@@ -27,3 +27,4 @@ staging-release.zip
 prod-release.zip
 /config/deployment/staging.json
 /config/deployment/production.json
+yarn.lock
