@@ -1,5 +1,4 @@
 import React from 'react';
-// @ts-ignore
 import {Admin} from 'react-admin';
 import DataProvider from "../../Provider/DataProvider";
 import {EventResource} from "../Resources/Events/EventResource";
@@ -30,6 +29,7 @@ const App = () => (
         i18nProvider={i18nProvider}
         loginPage={MyLoginPage}
         customRoutes={CustomRoutes}
+        disableTelemetry
     >
         {EventResource()}
         {MemberResource()}

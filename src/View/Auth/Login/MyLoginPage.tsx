@@ -1,6 +1,6 @@
 import React from 'react';
-import {Login} from 'react-admin';
+import {Login, LoginComponent} from 'react-admin';
 
 const MyLoginPage = ({theme}) => <Login theme={theme} backgroundImage=""/>;
 
-export default MyLoginPage;
+export default MyLoginPage as LoginComponent;

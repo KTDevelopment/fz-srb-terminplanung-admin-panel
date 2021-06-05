@@ -15,7 +15,7 @@ export const MiscList = () => {
     });
 
     if (loading) return <Loading />;
-    if (error) return <Error />;
+    if (error) return <Error error={error}/>;
     if (!data) return null;
 
     return (

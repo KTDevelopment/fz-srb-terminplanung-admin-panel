@@ -2,7 +2,7 @@ import React from "react";
 import {ChipField, TextField} from 'react-admin';
 
 export const FullMemberNameChip = (props) => {
-    let record = {fullName: props.record.firstName + ' ' + props.record.lastName};
+    let record = {fullName: fullNameRender(props.record), id: props.record.id};
     return <ChipField
         source="fullName"
         record={record}
@@ -10,7 +10,7 @@ export const FullMemberNameChip = (props) => {
 };
 
 export const FullMemberNameTextField = (props) => {
-    let record = {fullName: props.record.firstName + ' ' + props.record.lastName};
+    let record = {fullName: fullNameRender(props.record), id: props.record.id};
     return <TextField
         source="fullName"
         record={record}

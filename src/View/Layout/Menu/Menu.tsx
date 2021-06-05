@@ -27,8 +27,10 @@ const Menu = ({
     const translate = useTranslate();
     //@ts-ignore
     const isXSmall = useMediaQuery(theme => theme.breakpoints.down('xs'));
+    // @ts-ignore
     const open = useSelector(state => state.admin.ui.sidebarOpen);
     const resources = useSelector(getResources, shallowEqual);
+    // @ts-ignore
     useSelector(state => state.router.location.pathname); // used to force redraw on navigation
 
     const handleToggle = (menu: MenuName) => {

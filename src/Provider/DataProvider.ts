@@ -3,7 +3,7 @@ import {ResourceMapper} from "./ResourceMapper";
 import {CondOperator, RequestQueryBuilder} from "@nestjsx/crud-request";
 import {config} from "../Config/config";
 import httpClient from "./HttpClient";
-import {fetchUtils} from 'react-admin';
+import {DataProvider, fetchUtils} from 'react-admin';
 
 const apiUrl = config.apiBasePath;
 
@@ -66,7 +66,7 @@ export default {
     delete: (resource, params) =>
         httpClient(`${apiUrl}/${resource}/${params.id}`, {
             method: 'DELETE',
-        }).then(({json}) => {
+        }).then(() => {
             return {
                 data: {id: params.id},
             };
@@ -81,7 +81,7 @@ export default {
             data: responses.map(({json}) => json),
         }));
     }
-};
+} as DataProvider;
 
 function listAndMany(resource, params) {
     const {page, perPage} = params.pagination;

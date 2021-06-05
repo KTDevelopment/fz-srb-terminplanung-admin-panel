@@ -21,6 +21,7 @@ export const EventShow = props => (
         <TabbedShowLayout>
             <Tab label="Allgemein">
                 <ReferenceField source="eventId" reference="events"><TextField source="id"/></ReferenceField>
+                <TextField source="remoteId"/>
                 <TextField source="eventName"/>
                 <DateField showTime source="startDate"/>
                 <DateField showTime source="endDate"/>
