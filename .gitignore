@@ -27,4 +27,4 @@ dist-ssr
 .env.production
 
 staging-release.zip
-production-release.zip
+prod-release.zip
