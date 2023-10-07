@@ -1,54 +1,44 @@
 {
   "name": "fz-srb-terminplanung-backend-admin-panel",
-  "version": "1.4.0",
+  "version": "2.0.0",
   "private": true,
-  "dependencies": {
-    "@nestjsx/crud-request": "^4.6.2",
-    "@testing-library/jest-dom": "^5.13.0",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^13.1.9",
-    "@types/jest": "^26.0.23",
-    "@types/node": "^15.12.1",
-    "@types/react": "^17.0.9",
-    "@types/react-dom": "^17.0.6",
-    "jwt-decode": "^3.1.2",
-    "moment": "^2.24.0",
-    "query-string": "^7.0.0",
-    "ra-data-json-server": "^3.1.3",
-    "ra-language-german": "^3.13.4",
-    "react": "^17.0.2",
-    "react-admin": "^3.15.2",
-    "react-app-rewired": "^2.1.8",
-    "react-dom": "^17.0.2",
-    "react-scripts": "^4.0.3",
-    "typescript": "^4.3.2"
-  },
   "scripts": {
-    "start": "react-app-rewired start",
-    "prebuild": "rm -rf build",
-    "build": "INLINE_RUNTIME_CHUNK=false react-app-rewired build && cp README.md build/README.md",
-    "package": "cd build && zip -r release.zip .",
-    "test": "react-app-rewired test",
-    "eject": "react-scripts eject",
-    "release:staging": "DEPLOYMENT=staging yarn build && yarn package && mv build/release.zip staging-release.zip",
-    "release:prod": "DEPLOYMENT=production yarn build && yarn package && mv build/release.zip prod-release.zip"
+    "dev": "vite",
+    "serve": "vite preview",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint --fix --ext .ts,.tsx ./src",
+    "format": "prettier --write ./src",
+    "build": "yarn lint; yarn format; vite build",
+    "build:staging": "vite build --mode staging",
+    "build:clean": "rm -rf dist",
+    "package": "cd dist && zip -r release.zip .",
+    "release:staging": "yarn build:clean && yarn build:staging && yarn package && mv dist/release.zip staging-release.zip",
+    "release:prod": "yarn build:clean && yarn build && yarn package && mv dist/release.zip prod-release.zip"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "@mui/styles": "^5.14.12",
+    "@nestjsx/crud-request": "^4.6.2",
+    "jwt-decode": "^3.1.2",
+    "luxon": "^3.4.3",
+    "ra-language-german": "^3.13.5",
+    "react": "^18.2.0",
+    "react-admin": "^4.14.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/jwt-decode": "^3.1.0"
+    "@types/luxon": "^3.3.2",
+    "@types/node": "^18.16.1",
+    "@types/react": "^18.0.22",
+    "@types/react-dom": "^18.0.7",
+    "@typescript-eslint/eslint-plugin": "^5.60.1",
+    "@typescript-eslint/parser": "^5.60.1",
+    "@vitejs/plugin-react": "^4.0.1",
+    "eslint": "^8.43.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.8.8",
+    "typescript": "^5.1.6",
+    "vite": "^4.3.9"
   }
 }

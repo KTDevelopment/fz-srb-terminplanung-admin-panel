@@ -1,28 +1,31 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# test-admin
 
 ## Installation
 
-```bash
-$ yarn install
+Install the application dependencies by running:
+
+```sh
+yarn
 ```
 
-## Running the app
+## Development
 
-```bash
-$ yarn start
+Start the application in development mode by running:
+
+```sh
+yarn dev
 ```
 
-## Release
+## Production
 
-generates an optimized build for the specified deployment
+Build the application in production mode by running:
 
-```bash
-# staging
-$ yarn release:staging
-
-# production
-$ yarn release:production
+```sh
+yarn build
 ```
 
-## TODO
-Member validation -- password field -- roles field -- section field
+## Config
+
+The `.env` file contains the development config.
+Provide a `.env.staging` or a `.env.production` at build time, to provide configurations for other stages.
+
