@@ -16,12 +16,26 @@ Start the application in development mode by running:
 yarn dev
 ```
 
+##Staging
+
+Release for Staging
+
+```sh
+yarn release:staging
+```
+
 ## Production
 
 Build the application in production mode by running:
 
 ```sh
 yarn build
+```
+
+Release for Production
+
+```sh
+yarn release:prod
 ```
 
 ## Config
