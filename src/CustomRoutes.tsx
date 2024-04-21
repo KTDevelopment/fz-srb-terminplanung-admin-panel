@@ -7,6 +7,7 @@ import { PasswordResetPage } from "./Auth/PasswordReset";
 import { Contact } from "./Contact/Contact";
 import { PrivacyPolicy } from "./StaticPages/PrivacyPolicy";
 import { TermsAndConditions } from "./StaticPages/TermsAndConditions";
+import { TermsAndConditionsAKWedding } from "./StaticPages/TermsAndConditionsAKWedding";
 
 export interface CustomRoute {
   name: string;
@@ -27,6 +28,12 @@ export const CustomRoutesDefinitions: CustomRoute[] = [
     icon: GavelIcon,
     component: <TermsAndConditions />,
     labelKey: "customRoutes.termsAndConditions.name",
+  },
+  {
+    name: "termsAndConditionsAkWedding",
+    icon: GavelIcon,
+    component: <TermsAndConditionsAKWedding />,
+    labelKey: "customRoutes.termsAndConditionsAkWedding.name",
   },
   {
     name: "passwordReset",

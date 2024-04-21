@@ -186,6 +186,9 @@ const messages = {
     termsAndConditions: {
       name: "Nutzungshinweise",
     },
+    termsAndConditionsAkWedding: {
+      name: "Nutzungshinweise",
+    },
     passwordReset: {
       name: "Password zurück setzen",
     },
