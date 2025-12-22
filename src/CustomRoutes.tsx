@@ -8,7 +8,7 @@ import { Contact } from "./Contact/Contact";
 import { PrivacyPolicy } from "./StaticPages/PrivacyPolicy";
 import { TermsAndConditions } from "./StaticPages/TermsAndConditions";
 import { TermsAndConditionsAKWedding } from "./StaticPages/TermsAndConditionsAKWedding";
-import {TermsAndConditionsBeatCoach} from "./StaticPages/TermsAndConditionsBeatCoach";
+import { TermsAndConditionsBeatCoach } from "./StaticPages/TermsAndConditionsBeatCoach";
 
 export interface CustomRoute {
   name: string;
@@ -36,12 +36,12 @@ export const CustomRoutesDefinitions: CustomRoute[] = [
     component: <TermsAndConditionsAKWedding />,
     labelKey: "customRoutes.termsAndConditionsAkWedding.name",
   },
-    {
-        name: "termsAndConditionsBeatCoach",
-        icon: GavelIcon,
-        component: <TermsAndConditionsBeatCoach />,
-        labelKey: "customRoutes.termsAndConditionsBeatCoach.name",
-    },
+  {
+    name: "termsAndConditionsBeatCoach",
+    icon: GavelIcon,
+    component: <TermsAndConditionsBeatCoach />,
+    labelKey: "customRoutes.termsAndConditionsBeatCoach.name",
+  },
   {
     name: "passwordReset",
     icon: SecurityIcon,
